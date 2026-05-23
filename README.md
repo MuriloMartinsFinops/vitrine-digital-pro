@@ -1,2 +1,2 @@
 # vitrine-digital-pro
-Repositorio de Landing Pages
+Repositorio de LPs

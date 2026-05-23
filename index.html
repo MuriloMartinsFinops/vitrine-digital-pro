@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vitrine Digital Pro | Landing Pages Profissionais</title>
+
+  <meta name="description" content="Criação de landing pages profissionais para pequenos negócios, corretores, clínicas, profissionais da saúde, consultores, eventos e prestadores de serviço. Páginas com WhatsApp, formulário, vídeo e foco em conversão." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --bg-soft: #f8fafc;
+      --primary: #2563eb;
+      --primary-dark: #1e3a8a;
+      --accent: #22c55e;
+      --accent-dark: #15803d;
+      --text: #0f172a;
+      --muted: #64748b;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --soft-blue: #eff6ff;
+      --soft-green: #ecfdf5;
+      --shadow: 0 24px 80px rgba(15, 23, 42, 0.14);
+      --shadow-soft: 0 14px 40px rgba(15, 23, 42, 0.08);
+      --radius: 26px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img,
+    iframe {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section-soft {
+      background: var(--bg-soft);
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 46px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3.15rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      border: 0;
+      cursor: pointer;
+      transition: 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #052e16;
+      box-shadow: 0 18px 40px rgba(34, 197, 94, 0.25);
+    }
+
+    .btn-blue {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: #fff;
+    }
+
+    .btn-outline {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn-light {
+      background: #fff;
+      color: var(--primary-dark);
+      border: 1px solid var(--border);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(11, 18, 32, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      color: #fff;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      font-size: 1.05rem;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.26);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: #cbd5e1;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #cbd5e1;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .dropdown-trigger::after {
+      content: "▾";
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
+
+    .dropdown:hover .dropdown-trigger,
+    .dropdown:focus-within .dropdown-trigger {
+      color: #fff;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 34px;
+      left: 0;
+      min-width: 245px;
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 10px;
+      box-shadow: 0 22px 70px rgba(15, 23, 42, 0.22);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: 0.2s ease;
+      z-index: 100;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 12px;
+      border-radius: 12px;
+      color: #334155;
+      font-size: .92rem;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .dropdown-menu a:hover {
+      background: #eff6ff;
+      color: var(--primary);
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,.48), transparent 32%),
+        radial-gradient(circle at 82% 28%, rgba(34,197,94,.22), transparent 30%),
+        linear-gradient(135deg, #0b1220 0%, #111827 48%, #0f172a 100%);
+      overflow: hidden;
+      padding: 88px 0 98px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: #dbeafe;
+      border: 1px solid rgba(255,255,255,.15);
+      font-weight: 800;
+      font-size: .86rem;
+    }
+
+    .hero h1 {
+      margin: 22px 0;
+      max-width: 780px;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: .98;
+      letter-spacing: -.07em;
+    }
+
+    .hero h1 span {
+      color: #86efac;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 1.14rem;
+      max-width: 670px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 32px 0;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .proof-item {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .proof-item strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+
+    .proof-item span {
+      color: #cbd5e1;
+      font-size: .9rem;
+    }
+
+    .preview-card {
+      padding: 18px;
+      border-radius: 34px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      box-shadow: 0 40px 120px rgba(0,0,0,.3);
+    }
+
+    .browser {
+      overflow: hidden;
+      background: #fff;
+      color: var(--text);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .browser-top {
+      display: flex;
+      gap: 8px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #f8fafc;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 99px;
+      background: #cbd5e1;
+    }
+
+    .mock {
+      padding: 22px;
+    }
+
+    .mock-hero {
+      min-height: 220px;
+      border-radius: 22px;
+      padding: 28px;
+      color: #fff;
+      background:
+        linear-gradient(180deg, rgba(15,23,42,.08), rgba(15,23,42,.82)),
+        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .mock-hero h3 {
+      font-size: 1.65rem;
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      margin-bottom: 8px;
+    }
+
+    .mock-hero p {
+      font-size: .94rem;
+      color: #e5e7eb;
+    }
+
+    .mock-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .mock-box {
+      height: 86px;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid #dbeafe;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mock-box::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent, rgba(15,23,42,.38));
+    }
+
+    .mock-box:nth-child(1) {
+      background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .mock-box:nth-child(2) {
+      background-image: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .mock-box:nth-child(3) {
+      background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      transition: .25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--soft-blue);
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      letter-spacing: -.03em;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .split h2 {
+      font-size: clamp(2rem,4vw,3.1rem);
+      line-height: 1.08;
+      letter-spacing: -.055em;
+      margin-bottom: 16px;
+    }
+
+    .split p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .list {
+      display: grid;
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .list-item {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .check {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 99px;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 900;
+    }
+
+    .video-box {
+      overflow: hidden;
+      border-radius: 30px;
+      aspect-ratio: 16 / 9;
+      background: #020617;
+      box-shadow: var(--shadow);
+    }
+
+    .video-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .package {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: 0 22px 70px rgba(15,23,42,.08);
+      transition: .25s ease;
+    }
+
+    .package:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .package.featured {
+      border: 2px solid var(--primary);
+      transform: translateY(-14px);
+    }
+
+    .tag {
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 99px;
+      background: #eff6ff;
+      color: var(--primary);
+      font-weight: 900;
+      font-size: .78rem;
+      margin-bottom: 14px;
+    }
+
+    .popular {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 7px 10px;
+      border-radius: 99px;
+      background: var(--accent);
+      color: #052e16;
+      font-weight: 900;
+      font-size: .72rem;
+    }
+
+    .package h3 {
+      font-size: 1.35rem;
+      letter-spacing: -.04em;
+      margin-bottom: 8px;
+    }
+
+    .package .desc {
+      color: var(--muted);
+      min-height: 54px;
+    }
+
+    .price {
+      margin: 20px 0 6px;
+      font-size: 2.4rem;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -.06em;
+    }
+
+    .maintenance {
+      color: var(--muted);
+      font-size: .92rem;
+      margin-bottom: 18px;
+    }
+
+    .package ul {
+      list-style: none;
+      display: grid;
+      gap: 11px;
+      margin: 18px 0 26px;
+      flex: 1;
+    }
+
+    .package li {
+      display: flex;
+      gap: 10px;
+      color: #334155;
+      font-size: .95rem;
+    }
+
+    .package li::before {
+      content: "✓";
+      color: #16a34a;
+      font-weight: 900;
+    }
+
+    .package .btn {
+      width: 100%;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 55px rgba(15,23,42,.08);
+      transition: .25s ease;
+      display: block;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .portfolio-thumb {
+      min-height: 210px;
+      padding: 24px;
+      display: flex;
+      align-items: end;
+      color: #fff;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .portfolio-thumb::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,23,42,.08), rgba(15,23,42,.78));
+    }
+
+    .portfolio-thumb h3 {
+      position: relative;
+      z-index: 1;
+      font-size: 1.35rem;
+      line-height: 1.14;
+      letter-spacing: -.04em;
+    }
+
+    .thumb-imovel {
+      background-image: url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .thumb-estetica {
+      background-image: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .thumb-consultoria {
+      background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .thumb-saude-fitness {
+      background-image: url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .portfolio-body {
+      padding: 24px;
+    }
+
+    .portfolio-body p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: .95rem;
+    }
+
+    .mini-link {
+      color: var(--primary);
+      font-weight: 900;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .mini-link:hover {
+      color: var(--primary-dark);
+    }
+
+    .step {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      counter-increment: step;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .steps {
+      counter-reset: step;
+    }
+
+    .step::before {
+      content: counter(step);
+      width: 42px;
+      height: 42px;
+      border-radius: 99px;
+      background: #111827;
+      color: #fff;
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+      margin-bottom: 16px;
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .contact-card {
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,.18), transparent 34%),
+        linear-gradient(135deg, #0f172a, #111827);
+      color: #fff;
+      border-radius: 30px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      font-size: 2.1rem;
+      line-height: 1.08;
+      letter-spacing: -.05em;
+      margin-bottom: 14px;
+    }
+
+    .contact-card p {
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+      color: #e2e8f0;
+    }
+
+    .form-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: .88rem;
+      font-weight: 900;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+      transition: .2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+    }
+
+    textarea {
+      min-height: 112px;
+      resize: vertical;
+    }
+
+    .form-box .btn {
+      width: 100%;
+      margin-top: 14px;
+    }
+
+    details {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      letter-spacing: -.02em;
+    }
+
+    details p {
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .faq {
+      max-width: 880px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .final-cta {
+      text-align: center;
+      color: #fff;
+      background:
+        radial-gradient(circle at top right, rgba(34,197,94,.25), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(37,99,235,.36), transparent 34%),
+        #0f172a;
+      padding: 90px 0;
+    }
+
+    .final-cta h2 {
+      max-width: 850px;
+      margin: 0 auto 16px;
+      font-size: clamp(2rem,5vw,3.7rem);
+      line-height: 1.05;
+      letter-spacing: -.065em;
+    }
+
+    .final-cta p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      color: #cbd5e1;
+      font-size: 1.08rem;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 30px 0;
+      font-size: .92rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      width: 60px;
+      height: 60px;
+      border-radius: 99px;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      color: #052e16;
+      font-weight: 900;
+      font-size: 1.55rem;
+      box-shadow: 0 18px 42px rgba(34,197,94,.38);
+    }
+
+    @media (max-width: 1080px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .split,
+      .form-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3,
+      .packages {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .grid-4 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .package.featured {
+        transform: none;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding: 58px 0 72px;
+      }
+
+      .hero-proof,
+      .grid-3,
+      .grid-4,
+      .packages,
+      .portfolio-grid,
+      .form-grid,
+      .mock-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn,
+      .nav .btn {
+        width: 100%;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Vitrine Digital Pro">
+        <span class="brand-mark">LP</span>
+        <span>Vitrine Digital Pro</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#pacotes">Pacotes</a>
+
+        <div class="dropdown">
+          <a class="dropdown-trigger" href="#portfolio">Demonstrações</a>
+
+          <div class="dropdown-menu">
+            <a href="/demonstracoes/imobiliaria/">🏠 Imobiliária</a>
+            <a href="/demonstracoes/estetica/">💆 Estética</a>
+            <a href="/demonstracoes/consultoria/">🧑‍💼 Consultoria</a>
+            <a href="/demonstracoes/saude-fitness/">🏋️ Saúde & Fitness</a>
+          </div>
+        </div>
+
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn-primary" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20quero%20criar%20uma%20landing%20page%20profissional" target="_blank" rel="noopener">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="badge">🚀 Landing pages para pequenos negócios</span>
+
+          <h1>
+            Seu Instagram chama atenção. Sua <span>landing page</span> transforma interesse em contato.
+          </h1>
+
+          <p>
+            Criação de páginas profissionais para corretores, clínicas, consultores, profissionais da saúde,
+            eventos e prestadores de serviço que precisam apresentar melhor sua oferta e receber clientes pelo WhatsApp.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#pacotes">Conhecer pacotes</a>
+            <a class="btn btn-outline" href="#portfolio">Ver demonstrações</a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-item">
+              <strong>WhatsApp</strong>
+              <span>Contato direto com mensagem automática</span>
+            </div>
+
+            <div class="proof-item">
+              <strong>Vídeos</strong>
+              <span>Incorporação via YouTube ou Vimeo</span>
+            </div>
+
+            <div class="proof-item">
+              <strong>Leads</strong>
+              <span>Formulário e captação de interessados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <div class="browser">
+            <div class="browser-top">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+
+            <div class="mock">
+              <div class="mock-hero">
+                <h3>Página profissional para sua oferta</h3>
+                <p>
+                  Fotos, vídeos, serviços, prova social e botão direto para WhatsApp em uma experiência simples e objetiva.
+                </p>
+              </div>
+
+              <div class="mock-grid">
+                <span class="mock-box"></span>
+                <span class="mock-box"></span>
+                <span class="mock-box"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Problema comum</p>
+          <h2>Muitos negócios vendem bem, mas se apresentam mal no digital.</h2>
+          <p>
+            Quando o cliente precisa perguntar tudo pelo WhatsApp, procurar informações no feed ou receber fotos soltas,
+            a experiência perde força e confiança.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">📱</div>
+            <h3>Bio limitada</h3>
+            <p>O Instagram atrai, mas nem sempre organiza serviços, diferenciais, provas sociais e contato de forma clara.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💬</div>
+            <h3>WhatsApp sobrecarregado</h3>
+            <p>Sem uma página explicativa, o cliente pergunta informações básicas que poderiam estar em um único link.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⚠️</div>
+            <h3>Baixa percepção de valor</h3>
+            <p>Uma apresentação improvisada pode fazer um bom serviço parecer menos profissional do que realmente é.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Solução</p>
+
+          <h2>Uma página simples, bonita e pensada para gerar contatos.</h2>
+
+          <p>
+            A landing page funciona como uma vitrine digital: apresenta sua oferta, destaca benefícios, mostra fotos e vídeos,
+            reforça confiança e leva o visitante para a ação certa.
+          </p>
+
+          <div class="list">
+            <div class="list-item">
+              <span class="check">✓</span>
+              <div>
+                <strong>Mais clareza</strong>
+                <p>O cliente entende rapidamente o que você oferece, para quem é e como contratar.</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <span class="check">✓</span>
+              <div>
+                <strong>Mais confiança</strong>
+                <p>Fotos, vídeos, depoimentos e diferenciais aumentam a percepção de profissionalismo.</p>
+              </div>
+            </div>
+
+            <div class="list-item">
+              <span class="check">✓</span>
+              <div>
+                <strong>Mais conversão</strong>
+                <p>Botões de WhatsApp e formulários reduzem atrito e facilitam o contato.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-box">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo demonstrativo" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Para quem serve</p>
+          <h2>Ideal para negócios que vendem pelo Instagram, WhatsApp ou indicação.</h2>
+          <p>
+            Você pode usar uma landing page para divulgar serviços, produtos, imóveis, eventos, cursos, mentorias,
+            programas de saúde, consultorias ou campanhas específicas.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">🏠</div>
+            <h3>Corretores e imóveis</h3>
+            <p>Fotos, vídeos, localização, características e botão direto para o interessado falar com você.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💆</div>
+            <h3>Clínicas e estética</h3>
+            <p>Serviços, diferenciais, depoimentos, endereço e agendamento via WhatsApp.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🏋️</div>
+            <h3>Saúde e fitness</h3>
+            <p>Programas de treino, avaliação, acompanhamento, nutrição, mobilidade e performance.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Cursos e eventos</h3>
+            <p>Página de inscrição com detalhes, programação, prova social e chamada para ação.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🧑‍💼</div>
+            <h3>Consultores</h3>
+            <p>Mostre autoridade, método de trabalho, cases e formulário para diagnóstico.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛍️</div>
+            <h3>Negócios locais</h3>
+            <p>Divulgue promoções, endereço, horários, cardápio, catálogo e contato rápido.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pacotes" class="section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Pacotes</p>
+          <h2>Escolha o nível ideal para o momento do seu negócio.</h2>
+          <p>
+            Planos pensados para começar simples, evoluir com profissionalismo e criar páginas preparadas para campanhas.
+          </p>
+        </div>
+
+        <div class="packages">
+          <article class="package">
+            <span class="tag">Entrada</span>
+            <h3>LP Start</h3>
+            <p class="desc">Para quem precisa de uma página simples, objetiva e profissional.</p>
+            <div class="price">R$ 497</div>
+            <p class="maintenance">Manutenção sugerida: R$ 79/mês</p>
+
+            <ul>
+              <li>Página única com até 4 seções</li>
+              <li>Design responsivo</li>
+              <li>Botão de WhatsApp</li>
+              <li>Formulário simples</li>
+              <li>Links para redes sociais</li>
+              <li>Publicação da página</li>
+              <li>1 rodada de ajustes</li>
+            </ul>
+
+            <a class="btn btn-dark" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20pacote%20LP%20Start" target="_blank" rel="noopener">
+              Quero o Start
+            </a>
+          </article>
+
+          <article class="package featured">
+            <span class="popular">Mais vendido</span>
+            <span class="tag">Profissional</span>
+            <h3>LP Pro</h3>
+            <p class="desc">Para quem quer uma página mais completa e com melhor apresentação comercial.</p>
+            <div class="price">R$ 797</div>
+            <p class="maintenance">Manutenção sugerida: R$ 99/mês</p>
+
+            <ul>
+              <li>Página única com até 7 seções</li>
+              <li>Textos ajustados para conversão</li>
+              <li>Botão de WhatsApp com mensagem automática</li>
+              <li>Formulário integrado</li>
+              <li>Galeria de imagens</li>
+              <li>1 vídeo incorporado</li>
+              <li>SEO básico</li>
+              <li>2 rodadas de ajustes</li>
+            </ul>
+
+            <a class="btn btn-blue" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20pacote%20LP%20Pro" target="_blank" rel="noopener">
+              Quero o Pro
+            </a>
+          </article>
+
+          <article class="package">
+            <span class="tag">Performance</span>
+            <h3>LP Performance</h3>
+            <p class="desc">Para campanhas, lançamentos, eventos, captação de leads e ofertas estratégicas.</p>
+            <div class="price">R$ 1.497</div>
+            <p class="maintenance">Manutenção sugerida: R$ 199/mês</p>
+
+            <ul>
+              <li>Página com até 10 seções</li>
+              <li>Copy mais persuasiva</li>
+              <li>Página de obrigado</li>
+              <li>Integração com Google Sheets</li>
+              <li>Vídeo, depoimentos e provas sociais</li>
+              <li>Pixel ou Analytics, se houver conta</li>
+              <li>Estrutura para tráfego pago</li>
+              <li>3 rodadas de ajustes</li>
+            </ul>
+
+            <a class="btn btn-dark" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20pacote%20LP%20Performance" target="_blank" rel="noopener">
+              Quero Performance
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section section-soft">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Portfólio demonstrativo</p>
+          <h2>Modelos que podem ser adaptados para diferentes nichos.</h2>
+          <p>
+            Veja demonstrações de páginas para apresentar possibilidades reais aos primeiros clientes.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <a class="portfolio-card" href="/demonstracoes/imobiliaria/">
+            <div class="portfolio-thumb thumb-imovel">
+              <h3>Landing Page para Imóvel</h3>
+            </div>
+
+            <div class="portfolio-body">
+              <p>Modelo com fotos, vídeo, diferenciais, localização, características e WhatsApp do corretor.</p>
+              <span class="mini-link">Ver demonstração →</span>
+            </div>
+          </a>
+
+          <a class="portfolio-card" href="/demonstracoes/estetica/">
+            <div class="portfolio-thumb thumb-estetica">
+              <h3>Landing Page para Clínica</h3>
+            </div>
+
+            <div class="portfolio-body">
+              <p>Modelo com procedimentos, equipe, depoimentos, antes e depois e agendamento online.</p>
+              <span class="mini-link">Ver demonstração →</span>
+            </div>
+          </a>
+
+          <a class="portfolio-card" href="/demonstracoes/consultoria/">
+            <div class="portfolio-thumb thumb-consultoria">
+              <h3>Landing Page para Consultoria</h3>
+            </div>
+
+            <div class="portfolio-body">
+              <p>Modelo para consultores, especialistas, mentorias, diagnóstico e serviços profissionais.</p>
+              <span class="mini-link">Ver demonstração →</span>
+            </div>
+          </a>
+
+          <a class="portfolio-card" href="/demonstracoes/saude-fitness/">
+            <div class="portfolio-thumb thumb-saude-fitness">
+              <h3>Landing Page para Saúde & Fitness</h3>
+            </div>
+
+            <div class="portfolio-body">
+              <p>Modelo para personal trainers, profissionais da saúde, nutricionistas, fisioterapeutas e studios.</p>
+              <span class="mini-link">Ver demonstração →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Processo simples para colocar sua página no ar.</h2>
+        </div>
+
+        <div class="grid-4 steps">
+          <article class="step">
+            <h3>Diagnóstico</h3>
+            <p>Entendemos seu negócio, objetivo da página e público que deseja alcançar.</p>
+          </article>
+
+          <article class="step">
+            <h3>Materiais</h3>
+            <p>Você envia logo, fotos, textos, vídeos, contatos e principais informações.</p>
+          </article>
+
+          <article class="step">
+            <h3>Construção</h3>
+            <p>Criamos a página com design responsivo, CTA, formulário e estrutura comercial.</p>
+          </article>
+
+          <article class="step">
+            <h3>Publicação</h3>
+            <p>Publicamos a LP, validamos os links e deixamos tudo pronto para divulgação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-title">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2>Pontos importantes antes de contratar.</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Posso colocar vídeo na landing page?</summary>
+            <p>Sim. O ideal é incorporar vídeos pelo YouTube, Vimeo ou outra plataforma externa para manter a página leve e rápida.</p>
+          </details>
+
+          <details>
+            <summary>Domínio e ferramentas pagas estão inclusos?</summary>
+            <p>Domínio, ferramentas pagas, automações externas e plataformas premium podem ser contratadas à parte, conforme a necessidade do projeto.</p>
+          </details>
+
+          <details>
+            <summary>A manutenção mensal é obrigatória?</summary>
+            <p>Não necessariamente, mas é recomendada para manter a página ativa, corrigir links, fazer pequenos ajustes e acompanhar o funcionamento básico.</p>
+          </details>
+
+          <details>
+            <summary>O que preciso enviar para começar?</summary>
+            <p>Nome do negócio, logo, fotos, textos, lista de serviços, WhatsApp, redes sociais, endereço, vídeo e objetivo principal da página.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <div class="container form-wrap">
+        <div class="contact-card">
+          <p class="eyebrow" style="color:#86efac">Contato</p>
+
+          <h2>Vamos criar uma página profissional para o seu negócio?</h2>
+
+          <p>
+            Preencha o formulário ou chame diretamente no WhatsApp para receber uma sugestão de pacote ideal.
+          </p>
+
+          <div class="contact-list">
+            <span>📲 WhatsApp: (11) 97777-2809</span>
+            <span>✉️ E-mail: murilomartinsfinops@gmail.com</span>
+            <span>⚡ Pacotes a partir de R$ 497</span>
+          </div>
+
+          <div style="margin-top:26px">
+            <a class="btn btn-primary" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20quero%20uma%20landing%20page%20profissional" target="_blank" rel="noopener">
+              Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <form class="form-box" name="contato-lp" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contato-lp" />
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+            </div>
+
+            <div class="form-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input id="whatsapp" name="whatsapp" type="tel" placeholder="(00) 00000-0000" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="seuemail@dominio.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="pacote">Pacote de interesse</label>
+              <select id="pacote" name="pacote">
+                <option>LP Start</option>
+                <option>LP Pro</option>
+                <option>LP Performance</option>
+                <option>Ainda não sei</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="mensagem">Conte sobre seu projeto</label>
+              <textarea id="mensagem" name="mensagem" placeholder="Ex.: Quero divulgar minha clínica, imóvel, consultoria, evento, serviço ou campanha..."></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-blue" type="submit">
+            Enviar solicitação
+          </button>
+
+          <p style="color:var(--muted);font-size:.86rem;margin-top:12px">
+            O formulário pode ser integrado com Netlify Forms, Formspree, Make, Google Sheets ou CRM.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Pare de mandar informações soltas. Tenha uma página profissional para apresentar sua oferta.</h2>
+
+        <p>
+          Uma landing page simples, bonita e objetiva pode ser o primeiro passo para profissionalizar sua presença digital e gerar mais contatos.
+        </p>
+
+        <a class="btn btn-primary" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20quero%20come%C3%A7ar%20minha%20landing%20page" target="_blank" rel="noopener">
+          Começar agora
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© 2026 Vitrine Digital Pro. Landing pages profissionais para pequenos negócios.</span>
+      <span>Contato: murilomartinsfinops@gmail.com</span>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5511977772809?text=Ol%C3%A1%2C%20quero%20criar%20uma%20landing%20page" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    ☎
+  </a>
+</body>
+</html>
