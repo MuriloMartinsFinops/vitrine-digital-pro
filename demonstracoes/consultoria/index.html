@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Valor Profissional | Landing Page para Profissionais Liberais</title>
+
+  <meta name="description" content="Landing page demonstrativa para profissionais liberais como dentistas, advogados, personal trainers, nutricionistas, arquitetos, contadores e consultores." />
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --muted-2: #64748b;
+
+      --primary: #1e3a5f;
+      --primary-dark: #13273f;
+      --primary-soft: #eaf1f8;
+
+      --accent: #0f766e;
+      --accent-soft: #e0f2f1;
+
+      --gold: #b38a4a;
+      --green: #16a34a;
+
+      --border: #dbe3ee;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.07);
+
+      --radius: 26px;
+      --container: 1120px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: min(var(--container), 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--primary);
+      color: #f8fafc;
+      padding: 9px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 250, 252, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 900;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, var(--primary), #2e5a91);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.12;
+    }
+
+    .brand-text strong {
+      font-size: 18px;
+      letter-spacing: -0.4px;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 900;
+      font-size: 15px;
+      line-height: 1;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 12px 28px rgba(30, 58, 95, 0.22);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 12px 28px rgba(22, 163, 74, 0.22);
+    }
+
+    .btn-whatsapp:hover {
+      filter: brightness(0.96);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: var(--white);
+      color: var(--primary);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .hero {
+      padding: 84px 0 66px;
+      background:
+        radial-gradient(circle at top right, rgba(15, 118, 110, 0.10), transparent 35%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #bde5e1;
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 690px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .trust-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .trust-list span::before {
+      content: "✓ ";
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      height: 320px;
+      background:
+        linear-gradient(135deg, rgba(30, 58, 95, 0.15), rgba(15, 118, 110, 0.12)),
+        url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-tag {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background: var(--white);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-card-body {
+      padding: 26px;
+    }
+
+    .hero-card-body h3 {
+      font-size: 25px;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-body p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .mini-stat {
+      background: #f8fbfd;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1;
+      margin-bottom: 5px;
+      color: var(--primary);
+    }
+
+    .mini-stat span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-title .small {
+      color: var(--accent);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      letter-spacing: -1.2px;
+      margin-bottom: 14px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+      letter-spacing: -0.4px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .highlight {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .showcase-image {
+      min-height: 520px;
+      border-radius: 34px;
+      background:
+        linear-gradient(180deg, rgba(30, 58, 95, 0.08), rgba(15, 118, 110, 0.05)),
+        url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80");
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .showcase-content h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.12;
+      letter-spacing: -1.2px;
+      margin-bottom: 18px;
+    }
+
+    .showcase-content p {
+      color: var(--muted);
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .feature-item {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 14px;
+      align-items: start;
+      background: #f8fbfd;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .check {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    .feature-item h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .feature-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .service-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .service-cover {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .cover-1 {
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.18)),
+        url("https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .cover-2 {
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.18)),
+        url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .cover-3 {
+      background-image:
+        linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.18)),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--white);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 7px 11px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .service-info {
+      padding: 24px;
+    }
+
+    .service-info h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .service-info p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .info-row span {
+      background: #f8fbfd;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .lead-section {
+      padding: 0;
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+      padding: 72px 0;
+    }
+
+    .lead-content h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -1.3px;
+      margin-bottom: 16px;
+    }
+
+    .lead-content p {
+      color: #d8e4f1;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .lead-points {
+      display: grid;
+      gap: 10px;
+      color: #f8fafc;
+      font-weight: 700;
+    }
+
+    .lead-points span::before {
+      content: "✓ ";
+      color: #86efac;
+      font-weight: 900;
+    }
+
+    .form-card {
+      background: var(--white);
+      color: var(--text);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card h3 {
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+
+    .form-card p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 900;
+      color: var(--primary);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 14px;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+      background: #fff;
+      color: var(--text);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.10);
+    }
+
+    .form-group textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .testimonial p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .testimonial strong {
+      display: block;
+      font-size: 16px;
+    }
+
+    .testimonial span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .final-cta {
+      background: #eef6f8;
+      text-align: center;
+    }
+
+    .final-box {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 34px;
+      padding: 48px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .final-box h2 {
+      font-size: clamp(32px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -1.3px;
+      margin-bottom: 16px;
+    }
+
+    .final-box p {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 26px;
+    }
+
+    footer {
+      background: var(--primary-dark);
+      color: #dce7f3;
+      padding: 34px 0;
+      font-size: 14px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 14px 30px rgba(22, 163, 74, 0.30);
+      z-index: 999;
+      transition: 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px) scale(1.04);
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .showcase-grid,
+      .lead-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .showcase-image {
+        min-height: 360px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .navbar {
+        height: auto;
+        padding: 16px 0;
+      }
+
+      .navbar .btn {
+        display: none;
+      }
+
+      .hero {
+        padding: 56px 0 46px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.3px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .mini-stats,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .lead-grid {
+        padding: 56px 0;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    =====================================================
+    MODELO DEMONSTRATIVO - PROFISSIONAIS LIBERAIS
+    =====================================================
+
+    ONDE ALTERAR:
+
+    1. WhatsApp:
+    procure por:
+    https://wa.me/5511999999999
+
+    troque pelo número real no formato:
+    https://wa.me/55DDDNUMERO
+
+    Exemplo:
+    https://wa.me/5511977772809
+
+    2. Nome fictício:
+    procure por:
+    Valor Profissional
+
+    3. Nichos:
+    este modelo pode ser adaptado para:
+    dentistas, advogados, personal trainers, nutricionistas,
+    arquitetos, contadores, fisioterapeutas, consultores etc.
+
+    4. Imagens:
+    as imagens estão usando links externos para fins demonstrativos.
+    Depois você pode trocar por fotos reais do cliente.
+
+    5. Formulário:
+    este formulário é visual.
+    Para funcionar, integre com Netlify Forms, Formspree, Tally,
+    Google Forms ou envie direto para WhatsApp.
+  -->
+
+  <div class="topbar">
+    <div class="container">
+      Presença digital profissional para especialistas que vivem de atendimento, confiança e autoridade
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a href="#" class="brand">
+        <div class="brand-mark">💼</div>
+        <div class="brand-text">
+          <strong>Valor Profissional</strong>
+          <span>Soluções para profissionais liberais</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#beneficios">Diferenciais</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=Olá,%20quero%20mais%20informações%20sobre%20o%20atendimento." target="_blank">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">Profissionais liberais em destaque</div>
+
+          <h1>
+            Sua especialidade merece uma página <span>clara, profissional e pronta para gerar contatos.</span>
+          </h1>
+
+          <p>
+            A Valor Profissional ajuda especialistas como dentistas, advogados, personal trainers,
+            nutricionistas, arquitetos, contadores e consultores a apresentarem sua solução com mais clareza,
+            autoridade e facilidade de contato.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=Olá,%20quero%20agendar%20um%20atendimento%20ou%20tirar%20dúvidas." target="_blank">
+              Solicitar atendimento
+            </a>
+
+            <a class="btn btn-outline" href="#especialidades">
+              Ver especialidades
+            </a>
+          </div>
+
+          <div class="trust-list">
+            <span>Oferta bem explicada</span>
+            <span>Autoridade profissional</span>
+            <span>Captação de leads</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-image">
+            <div class="hero-tag">Atendimento consultivo</div>
+          </div>
+
+          <div class="hero-card-body">
+            <h3>Especialistas que precisam ser encontrados</h3>
+            <p>
+              Uma landing page bem estruturada ajuda o cliente a entender quem você é,
+              o que oferece e por que deve entrar em contato com você.
+            </p>
+
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <strong>1</strong>
+                <span>página objetiva</span>
+              </div>
+
+              <div class="mini-stat">
+                <strong>100%</strong>
+                <span>responsiva</span>
+              </div>
+
+              <div class="mini-stat">
+                <strong>+ contato</strong>
+                <span>mais conversão</span>
+              </div>
+            </div>
+
+            <a class="btn btn-primary" href="#contato">
+              Quero saber mais
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <div class="container">
+
+        <div class="section-title">
+          <div class="small">Diferenciais</div>
+          <h2>Uma estrutura versátil para profissionais que vendem confiança e conhecimento</h2>
+          <p>
+            Este modelo foi pensado para profissionais liberais que precisam transmitir credibilidade,
+            explicar sua atuação e facilitar agendamentos ou solicitações de contato.
+          </p>
+        </div>
+
+        <div class="grid-3">
+
+          <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Autoridade profissional</h3>
+            <p>
+              Espaço para apresentar experiência, especialidade, diferenciais, certificações e forma de atendimento.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📋</div>
+            <h3>Oferta clara</h3>
+            <p>
+              Organização simples para explicar serviços, benefícios e como o cliente pode ser atendido.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📞</div>
+            <h3>Contato facilitado</h3>
+            <p>
+              Botões de WhatsApp, formulário e chamadas estratégicas para gerar mais conversas.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">⭐</div>
+            <h3>Mais credibilidade</h3>
+            <p>
+              Estrutura ideal para incluir depoimentos, resultados, avaliações, selos e prova social.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📍</div>
+            <h3>Atendimento local ou online</h3>
+            <p>
+              Funciona para profissionais com consultório, escritório, estúdio ou atendimento remoto.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📈</div>
+            <h3>Captação de leads</h3>
+            <p>
+              Página pensada para transformar visitas em contatos reais e oportunidades de negócio.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="highlight">
+      <div class="container showcase-grid">
+
+        <div class="showcase-image"></div>
+
+        <div class="showcase-content">
+          <h2>Para quem precisa explicar bem o que faz e mostrar valor com profissionalismo.</h2>
+
+          <p>
+            Muitos profissionais têm um serviço excelente, mas ainda não possuem uma página
+            que organize a mensagem e ajude o cliente a entender rapidamente a proposta.
+          </p>
+
+          <div class="feature-list">
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <div>
+                <h3>Posicionamento mais forte</h3>
+                <p>Você se apresenta de forma mais clara, profissional e confiável.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <div>
+                <h3>Contato mais simples</h3>
+                <p>O cliente encontra rapidamente o caminho para agendar ou falar com você.</p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="check">✓</div>
+              <div>
+                <h3>Versátil para vários nichos</h3>
+                <p>Dentistas, advogados, personal trainers, nutricionistas, arquitetos e consultores.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=Olá,%20quero%20entender%20melhor%20como%20funciona%20o%20atendimento." target="_blank">
+            Conversar agora
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="especialidades">
+      <div class="container">
+
+        <div class="section-title">
+          <div class="small">Especialidades demonstrativas</div>
+          <h2>Exemplos de como o modelo pode ser adaptado</h2>
+          <p>
+            Abaixo estão três exemplos fictícios para mostrar como este mesmo formato pode atender
+            diferentes profissionais liberais.
+          </p>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="card service-card">
+            <div class="service-cover cover-1">
+              <div class="badge">Odontologia</div>
+            </div>
+
+            <div class="service-info">
+              <h3>Dra. Helena Martins</h3>
+              <p>
+                Atendimento odontológico com foco em avaliação clínica, prevenção, estética dental e acompanhamento personalizado.
+              </p>
+
+              <div class="info-row">
+                <span>avaliação</span>
+                <span>atendimento local</span>
+                <span>consulta agendada</span>
+              </div>
+
+              <div class="price">Agenda aberta</div>
+
+              <a class="btn btn-outline" href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20agendar%20uma%20consulta%20odontológica." target="_blank">
+                Agendar consulta
+              </a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="service-cover cover-2">
+              <div class="badge">Advocacia</div>
+            </div>
+
+            <div class="service-info">
+              <h3>Dr. Rafael Oliveira</h3>
+              <p>
+                Consultoria jurídica personalizada com atendimento inicial para análise do caso e orientação prática.
+              </p>
+
+              <div class="info-row">
+                <span>consultoria</span>
+                <span>atendimento online</span>
+                <span>análise inicial</span>
+              </div>
+
+              <div class="price">Atendimento sob consulta</div>
+
+              <a class="btn btn-outline" href="https://wa.me/5511999999999?text=Olá,%20quero%20falar%20sobre%20uma%20consultoria%20jurídica." target="_blank">
+                Solicitar contato
+              </a>
+            </div>
+          </article>
+
+          <article class="card service-card">
+            <div class="service-cover cover-3">
+              <div class="badge">Personal Trainer</div>
+            </div>
+
+            <div class="service-info">
+              <h3>Lucas Performance</h3>
+              <p>
+                Treinamento personalizado para condicionamento físico, emagrecimento e evolução com acompanhamento próximo.
+              </p>
+
+              <div class="info-row">
+                <span>treino personalizado</span>
+                <span>presencial ou online</span>
+                <span>avaliação física</span>
+              </div>
+
+              <div class="price">Plano inicial disponível</div>
+
+              <a class="btn btn-outline" href="https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20em%20uma%20avaliação%20com%20personal." target="_blank">
+                Quero saber mais
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="processo" class="highlight">
+      <div class="container">
+
+        <div class="section-title">
+          <div class="small">Como funciona</div>
+          <h2>Da visita na página ao primeiro contato</h2>
+          <p>
+            Este tipo de LP é ideal para conduzir o cliente de forma simples até o agendamento,
+            solicitação de proposta ou conversa inicial.
+          </p>
+        </div>
+
+        <div class="grid-4">
+
+          <div class="card">
+            <div class="step-number">1</div>
+            <h3>O visitante entende sua atuação</h3>
+            <p>
+              A página mostra claramente quem você atende, o que oferece e seus diferenciais.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="step-number">2</div>
+            <h3>Conhece seus serviços</h3>
+            <p>
+              Seções estratégicas ajudam a apresentar soluções, benefícios e forma de trabalho.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="step-number">3</div>
+            <h3>Ganha confiança</h3>
+            <p>
+              Depoimentos, autoridade profissional e clareza aumentam a credibilidade.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="step-number">4</div>
+            <h3>Entra em contato</h3>
+            <p>
+              O cliente é direcionado para WhatsApp, formulário ou outro canal de atendimento.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contato" class="lead-section">
+      <div class="container lead-grid">
+
+        <div class="lead-content">
+          <h2>Receba um atendimento alinhado ao que você procura.</h2>
+
+          <p>
+            Preencha seus dados ou fale diretamente pelo WhatsApp. Em um projeto real,
+            esta estrutura pode ser adaptada para qualquer profissional liberal.
+          </p>
+
+          <div class="lead-points">
+            <span>Atendimento inicial sem complicação</span>
+            <span>Contato rápido e objetivo</span>
+            <span>Modelo adaptável para vários nichos</span>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>Quero falar com um especialista</h3>
+          <p>
+            Formulário demonstrativo. Em um projeto real, ele pode enviar dados para e-mail,
+            planilha, CRM ou WhatsApp.
+          </p>
+
+          <form>
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" placeholder="Seu nome completo" />
+            </div>
+
+            <div class="form-group">
+              <label>WhatsApp</label>
+              <input type="tel" placeholder="(11) 99999-9999" />
+            </div>
+
+            <div class="form-group">
+              <label>Área de interesse</label>
+              <select>
+                <option>Selecione uma opção</option>
+                <option>Odontologia</option>
+                <option>Advocacia</option>
+                <option>Personal trainer</option>
+                <option>Nutrição</option>
+                <option>Arquitetura</option>
+                <option>Contabilidade</option>
+                <option>Consultoria</option>
+                <option>Outro serviço profissional</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Tipo de atendimento</label>
+              <select>
+                <option>Selecione uma opção</option>
+                <option>Presencial</option>
+                <option>Online</option>
+                <option>Tanto faz</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Mensagem</label>
+              <textarea placeholder="Conte rapidamente o que você procura"></textarea>
+            </div>
+
+            <a class="btn btn-whatsapp" style="width: 100%;" href="https://wa.me/5511999999999?text=Olá,%20quero%20mais%20informações%20sobre%20o%20atendimento." target="_blank">
+              Enviar pelo WhatsApp
+            </a>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="section-title">
+          <div class="small">Depoimentos fictícios</div>
+          <h2>Confiança é um fator decisivo para profissionais liberais</h2>
+          <p>
+            Em uma página real, esta seção pode receber depoimentos verdadeiros, resultados,
+            avaliações e comentários de clientes.
+          </p>
+        </div>
+
+        <div class="grid-3">
+
+          <div class="testimonial">
+            <p>
+              “Gostei da clareza com que tudo foi explicado. Isso me passou confiança logo no primeiro contato.”
+            </p>
+            <strong>Mariana Lopes</strong>
+            <span>Cliente fictícia</span>
+          </div>
+
+          <div class="testimonial">
+            <p>
+              “A página facilitou muito meu entendimento sobre o serviço e me ajudou a decidir entrar em contato.”
+            </p>
+            <strong>Eduardo Nunes</strong>
+            <span>Cliente fictício</span>
+          </div>
+
+          <div class="testimonial">
+            <p>
+              “O atendimento foi rápido e objetivo. A estrutura da página deixou a proposta muito mais profissional.”
+            </p>
+            <strong>Camila Ferreira</strong>
+            <span>Cliente fictícia</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="final-box">
+          <h2>Quer uma página profissional para apresentar melhor seu serviço?</h2>
+
+          <p>
+            Fale agora e veja como uma landing page bem feita pode ajudar você a atrair,
+            explicar e converter melhor seus atendimentos.
+          </p>
+
+          <div class="hero-actions" style="justify-content: center;">
+            <a class="btn btn-whatsapp" href="https://wa.me/5511999999999?text=Olá,%20quero%20mais%20informações%20sobre%20essa%20landing%20page." target="_blank">
+              Falar no WhatsApp
+            </a>
+
+            <a class="btn btn-outline" href="#especialidades">
+              Ver exemplos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 Valor Profissional. Página demonstrativa para portfólio.</p>
+      <p>Modelo criado por LP Pro Express.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5511999999999?text=Olá,%20quero%20mais%20informações." target="_blank" aria-label="Falar pelo WhatsApp">
+    ☎
+  </a>
+
+</body>
+</html>
